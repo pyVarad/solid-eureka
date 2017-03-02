@@ -8,7 +8,7 @@ the multiples of 3 or 5 below 1000.
 
 from commonLibs.timer import Timer
 
-@profile
+
 def solution(limit):
     """
     Find the numbers divisible by 3 and 5 and add them
@@ -21,7 +21,6 @@ def solution(limit):
     return sum
 
 
-@profile
 def solution_effective(limit, divisor):
     """
     Effective Algorithm
