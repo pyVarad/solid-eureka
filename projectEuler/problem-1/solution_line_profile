@@ -1,0 +1,35 @@
+Wrote profile results to solution_1.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.001087 s
+File: solution_1.py
+Function: solution at line 11
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    11                                           @profile
+    12                                           def solution(limit):
+    13                                               """
+    14                                               Find the numbers divisible by 3 and 5 and add them
+    15                                               """
+    16         1            1      1.0      0.1      sum = 0
+    17      1000          387      0.4     35.6      for num in range(1, limit):
+    18       999          508      0.5     46.7          if num % 3 == 0 or num % 5 == 0:
+    19       466          190      0.4     17.5              sum += num
+    20
+    21         1            1      1.0      0.1      return sum
+
+Total time: 8e-06 s
+File: solution_1.py
+Function: solution_effective at line 24
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    24                                           @profile
+    25                                           def solution_effective(limit, divisor):
+    26                                               """
+    27                                               Effective Algorithm
+    28                                               """
+    29         3            3      1.0     37.5      target = (limit-1) // divisor
+    30         3            3      1.0     37.5      sum_of_all = divisor * (target * (target + 1))/2
+    31         3            2      0.7     25.0      return sum_of_all
