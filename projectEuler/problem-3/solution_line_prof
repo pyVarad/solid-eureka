@@ -1,0 +1,19 @@
+varad@adithya-desktop ~/app/practiceProblems/projectEuler/problem-3 $ kernprof -l -v solution.py
+6857
+Wrote profile results to solution.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.00614 s
+File: solution.py
+Function: factor at line 15
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    15                                           @profile
+    16                                           def factor(num):
+    17                                               ''' Factors of a number
+    18                                               '''
+    19         1         3286   3286.0     53.5      for factors in factorint(num).keys():
+    20         1         2852   2852.0     46.4          if primeNumber_2(factors):
+    21         1            1      1.0      0.0              break
+    22         1            1      1.0      0.0      return factors
