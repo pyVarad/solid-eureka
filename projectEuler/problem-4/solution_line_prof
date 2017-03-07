@@ -1,0 +1,23 @@
+kernprof -l -v solution.py
+906609
+Wrote profile results to solution.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.931195 s
+File: solution.py
+Function: solution at line 10
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   10                                           @profile
+   11                                           def solution(num):
+   12         1            1      1.0      0.0      threshold = 0
+   13      1000          420      0.4      0.0      while num:
+   14    497916       210311      0.4     22.6          for i in range(num, 1, -1):
+   15    496920       350452      0.7     37.6              p = str(num * i)
+   16    496920       366774      0.7     39.4              if p == p[::-1]:
+   17      2421         2714      1.1      0.3                  if int(p) > threshold:
+   18         3            3      1.0      0.0                      threshold = int(p)
+   19         3           15      5.0      0.0                      break
+   20       999          504      0.5      0.1          num -= 1
+   21         1            1      1.0      0.0      return threshold
