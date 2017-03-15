@@ -17,5 +17,6 @@ def fibanocci(a=1, b=1, limit=10000000000000000000000000000000000000000000000000
 
 
 if __name__ == "__main__":
-   fibanocci()
-   print FibanocciSeries
+#   fibanocci()
+#   print FibanocciSeries
+    print factorial(1000)
